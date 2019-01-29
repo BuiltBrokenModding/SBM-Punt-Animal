@@ -1,0 +1,16 @@
+[
+{
+  "modid": "getout",
+  "name": "GetOut!",
+  "description": "Push animals without damage them.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LotuxPunk"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
