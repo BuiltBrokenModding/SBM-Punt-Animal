@@ -20,3 +20,11 @@ build
 # other
 eclipse
 run
+
+output/
+
+SBM-Punt-Animal\.txt
+
+changelog\.html
+
+CompiledWith\.txt

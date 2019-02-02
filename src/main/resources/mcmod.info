@@ -1,14 +1,14 @@
 [
 {
-  "modid": "getout",
-  "name": "GetOut!",
-  "description": "Push animals without damage them.",
+  "modid": "sbmpuntanimal",
+  "name": "SBM-Punt-Animal",
+  "description": "Push animals without causing damage",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["LotuxPunk"],
-  "credits": "",
+  "credits": "LotuxPunk: Developer, DarkCow: Owner, BuiltBrokenModding: Commission Giver",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
