@@ -1,17 +1,18 @@
 package com.builtbroken.puntanimal;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-@Mod(modid = PuntAnimal.MODID, name = PuntAnimal.MOD_NAME, version = PuntAnimal.VERSION, acceptableRemoteVersions = "*")
-@Mod.EventBusSubscriber()
+@Mod(PuntAnimal.MODID)
+@Mod.EventBusSubscriber
 public class PuntAnimal
 {
     public static final Logger LOGGER = LogManager.getLogger();
