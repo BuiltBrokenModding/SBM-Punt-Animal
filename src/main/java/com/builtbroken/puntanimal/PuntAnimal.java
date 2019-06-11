@@ -4,9 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.passive.EntityAnimal;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -34,12 +34,12 @@ public class PuntAnimal
         try
         {
             final Entity source = event.getSource().getTrueSource();
-            if (source instanceof EntityPlayer)
+            if (source instanceof PlayerEntity)
             {
-                EntityPlayer attacker = (EntityPlayer) source;
-                EntityLivingBase victim = event.getEntityLiving();
+                PlayerEntity attacker = (PlayerEntity) source;
+                LivingEntity victim = event.getEntityLiving();
 
-                if (attacker.isSneaking() && victim instanceof EntityAnimal) //TODO set allow/block list for victim
+                if (attacker.isSneaking() && victim instanceof AnimalEntity) //TODO set allow/block list for victim
                 {
                     event.setCanceled(true);
 
