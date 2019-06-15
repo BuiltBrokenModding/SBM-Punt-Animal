@@ -18,7 +18,6 @@ public class PuntAnimal
     public static final Logger LOGGER = LogManager.getLogger();
 
     public static final String MODID = "sbmpuntanimal";
-    public static final String MOD_NAME = "SBM-Punt-Animal";
 
     //Version injection data
     public static final String MAJOR_VERSION = "@MAJOR@";
