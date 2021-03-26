@@ -13,13 +13,13 @@ apply plugin: 'eclipse'
 
 version = '1.0.0'
 group = 'sbm-puntanimal'
-archivesBaseName = 'SBM-Punt-Animal'
+archivesBaseName = 'SBM-Punt-Animal-1.13.2'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
     mappings channel: 'stable', version: '43-1.13'
-	
+
     runs {
         client = {
             properties 'forge.logging.markers': 'SCAN,REGISTRIES,REGISTRYDUMP'
