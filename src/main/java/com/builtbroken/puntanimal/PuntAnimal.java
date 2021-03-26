@@ -11,22 +11,11 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod(PuntAnimal.MODID)
+@Mod("sbmpuntanimal")
 @Mod.EventBusSubscriber
-public class PuntAnimal
+public final class PuntAnimal
 {
     public static final Logger LOGGER = LogManager.getLogger();
-
-    public static final String MODID = "sbmpuntanimal";
-    public static final String MOD_NAME = "SBM-Punt-Animal";
-
-    //Version injection data
-    public static final String MAJOR_VERSION = "@MAJOR@";
-    public static final String MINOR_VERSION = "@MINOR@";
-    public static final String REVISION_VERSION = "@REVIS@";
-    public static final String BUILD_VERSION = "@BUILD@";
-    public static final String MC_VERSION = "@MC@";
-    public static final String VERSION = MC_VERSION + "-" + MAJOR_VERSION + "." + MINOR_VERSION + "." + REVISION_VERSION + "." + BUILD_VERSION;
 
     @SubscribeEvent
     public static void onDamage(LivingAttackEvent event)
