@@ -31,8 +31,8 @@ public class PuntAnimal
                 {
                     event.setCanceled(true);
 
-                    int xr = (int) -(victim.posX - attacker.posX);
-                    int zr = (int) -(victim.posZ - attacker.posZ);
+                    int xr = (int) -(victim.getPosX() - attacker.getPosX());
+                    int zr = (int) -(victim.getPosZ() - attacker.getPosZ());
 
                     //When xr & zr == 0, both are on the same block, we don't know where to push
                     if (xr != 0 || zr != 0)
