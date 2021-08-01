@@ -1,10 +1,10 @@
 package com.builtbroken.puntanimal;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,18 +23,18 @@ public class PuntAnimal
         try
         {
             final Entity source = event.getSource().getDirectEntity();
-            if (source instanceof PlayerEntity)
+            if (source instanceof Player)
             {
-                PlayerEntity attacker = (PlayerEntity) source;
-                LivingEntity victim = event.getEntityLiving();
+                final Player attacker = (Player) source;
+                final LivingEntity victim = event.getEntityLiving();
 
-                if (attacker.isCrouching() && victim instanceof AnimalEntity) //TODO set allow/block list for victim
+                if (attacker.isCrouching() && victim instanceof Animal) //TODO set allow/block list for victim
                 {
                     event.setCanceled(true);
 
                     victim.knockback(0.5F,
-                            MathHelper.sin(attacker.yRot * ((float)Math.PI / 180F)),
-                            -MathHelper.cos(attacker.yRot * ((float)Math.PI / 180F)));
+                            Mth.sin(attacker.yHeadRot * ((float)Math.PI / 180F)),
+                            -Mth.cos(attacker.yHeadRot * ((float)Math.PI / 180F)));
                 }
             }
         }
